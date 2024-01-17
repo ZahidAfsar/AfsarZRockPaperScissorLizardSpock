@@ -1,0 +1,13 @@
+.btnRound{
+    border-radius: 60px;
+    padding: 2%;
+}
+
+.btnCenter{
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 50%;
+}
