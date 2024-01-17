@@ -1,7 +1,22 @@
+@font-face {
+    font-family: Mogra;
+    src: url(../assets/Mogra-Regular.ttf);
+}
+
+@font-face {
+    font-family: Monofett;
+    src: url(../assets/Monofett-Regular.ttf);
+}
+
+.MograFont{
+    font-family: Mogra;
+}
+
 .btnRound{
     border-radius: 60px;
     padding: 2%;
     background-color: #CCD5FF;
+    font-family: Mogra;
 }
 
 .btnCenter{
@@ -13,4 +28,9 @@
     right: 2%;
     top: 2%;
     background-color: #FFD400;
+    font-family: Mogra;
+}
+
+h1{
+    font-family: Monofett;
 }
