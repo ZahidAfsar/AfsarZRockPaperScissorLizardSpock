@@ -1,6 +1,7 @@
 .btnRound{
     border-radius: 60px;
     padding: 2%;
+    background-color: #CCD5FF;
 }
 
 .btnCenter{
@@ -9,5 +10,7 @@
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    right: 50%;
+    right: 2%;
+    top: 2%;
+    background-color: #FFD400;
 }
