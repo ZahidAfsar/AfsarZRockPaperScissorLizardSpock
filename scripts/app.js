@@ -24,8 +24,13 @@ let body = document.getElementById("body");
 let p1Score = document.getElementById("p1Score");
 let p2Score = document.getElementById("p2Score");
 
+let p1Score2 = document.getElementById("p1Score2");
+let p2Score2 = document.getElementById("p2Score2");
+
+
 let displayText = document.getElementById("displayText");
 let displayText2 = document.getElementById("displayText2");
+let displayText3 = document.getElementById("displayText3");
 let endScreen = document.getElementById("endScreen");
 let winText = document.getElementById("winText");
 
@@ -256,7 +261,7 @@ spockBtn.addEventListener('click', async () => {
 
 
 rockBtn2.addEventListener('click', async () => { 
-        displayText.textContent = "Player 1's Turn"
+        displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'rock';
         TurnOne = true;
         compareInput(userPick, userSecondPick);
@@ -265,7 +270,7 @@ rockBtn2.addEventListener('click', async () => {
 
 
 paperBtn2.addEventListener('click', async () => {
-        displayText.textContent = "Player 1's Turn"
+        displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'paper';
         TurnOne = true;
         compareInput(userPick, userSecondPick);
@@ -275,7 +280,7 @@ paperBtn2.addEventListener('click', async () => {
 
 
 scissorsBtn2.addEventListener('click', async () => {
-        displayText.textContent = "Player 1's Turn"
+        displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'scissors';
         TurnOne = true;
         compareInput(userPick, userSecondPick);
@@ -285,7 +290,7 @@ scissorsBtn2.addEventListener('click', async () => {
 
 
 lizardBtn2.addEventListener('click', async () => {
-        displayText.textContent = "Player 1's Turn"
+        displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'lizard';
         TurnOne = true;
         compareInput(userPick, userSecondPick);
@@ -294,7 +299,7 @@ lizardBtn2.addEventListener('click', async () => {
 });
 
 spockBtn2.addEventListener('click', async () => {
-        displayText.textContent = "Player 1's Turn"
+        displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'spock';
         TurnOne = true;
         compareInput(userPick, userSecondPick);
@@ -306,7 +311,7 @@ spockBtn2.addEventListener('click', async () => {
 
 
 rockBtn3.addEventListener('click', async () => {
-        displayText.textContent = "Player 2's Turn"
+        displayText3.textContent = "Player 1's Turn"
         userPick = 'rock';
         TurnOne = false;
         compareInput(userSecondPick, userPick);
@@ -316,7 +321,7 @@ rockBtn3.addEventListener('click', async () => {
 
 
 paperBtn3.addEventListener('click', async () => {
-        displayText.textContent = "Player 2's Turn"
+        displayText3.textContent = "Player 1's Turn"
         userPick = 'paper';
         TurnOne = false;
         compareInput(userSecondPick, userPick);
@@ -326,7 +331,7 @@ paperBtn3.addEventListener('click', async () => {
 
 
 scissorsBtn3.addEventListener('click', async () => {
-        displayText.textContent = "Player 2's Turn"
+        displayText3.textContent = "Player 1's Turn"
         userPick = 'scissors';
         TurnOne = false;
           compareInput(userSecondPick, userPick);
@@ -336,7 +341,7 @@ scissorsBtn3.addEventListener('click', async () => {
 
 
 lizardBtn3.addEventListener('click', async () => {
-        displayText.textContent = "Player 2's Turn"
+        displayText3.textContent = "Player 1's Turn"
         userPick = 'lizard';
         TurnOne = false;
         compareInput(userSecondPick, userPick);
@@ -345,7 +350,7 @@ lizardBtn3.addEventListener('click', async () => {
 });
 
 spockBtn3.addEventListener('click', async () => {
-        displayText.textContent = "Player 2's Turn"
+        displayText3.textContent = "Player 1's Turn"
         userPick = 'spock';
         TurnOne = false;
         compareInput(userSecondPick, userPick);
@@ -382,7 +387,10 @@ function compareInput(u1, u2) {
 
 function updateScore() {
     p1Score.textContent = `P1 SCORE: ${userOnePoints}`;
-    p2Score.textContent = `P2 SCORE: ${userTwoPoints}`;
+    p2Score.textContent = `CPU SCORE: ${userTwoPoints}`;
+
+    p1Score2.textContent = `P1 SCORE: ${userOnePoints}`;
+    p2Score2.textContent = `P2 SCORE: ${userTwoPoints}`;
 
     if (userTwoPoints === ScoreLimit && IsTrue === false) {
         body.className = "endBg"
