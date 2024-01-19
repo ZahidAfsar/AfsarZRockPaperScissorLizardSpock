@@ -413,7 +413,7 @@ function updateScore() {
     }
 }
 
-
+// Fetch
 
 async function CPU() {
     const promise = await fetch('https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption');
