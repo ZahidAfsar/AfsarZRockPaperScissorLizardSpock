@@ -78,6 +78,14 @@ h1{
     font-size: 70px;
 }
 
+.center2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #C884A6;
+    font-size: 70px;
+}
+
 .topSpace{
     padding-top: 7%;
 }
