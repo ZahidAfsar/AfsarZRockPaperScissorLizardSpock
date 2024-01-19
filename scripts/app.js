@@ -1,6 +1,9 @@
 let oneVersusOneBtn = document.getElementById("oneVersusOneBtn");
 let oneVScpuBtn = document.getElementById("oneVScpuBtn");
 
+let mainStartBtn = document.getElementById("mainStartBtn");
+let mainPageHide = document.getElementById("mainPageHide");
+
 let firstPageHide = document.getElementById("firstPageHide");
 let choicesPageHide = document.getElementById("choicesPageHide");
 
@@ -34,6 +37,11 @@ let userTwoPoints = 0;
 
 let userPick;
 let userSecondPick;
+
+mainStartBtn.addEventListener('click', function () {
+    mainPageHide.style.display = "none"
+    firstPageHide.style.display = "block"
+})
 
 oneVersusOneBtn.addEventListener('click', function () {
     IsTrue = true;

@@ -91,6 +91,15 @@ h1{
     font-family: Mogra;
     padding-top: 4%;
 }
+.playBtnMain{
+    width: 300px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #CCD5FF;
+    color: #2E294E;
+    border-color: #CCD5FF;
+    font-family: Mogra;
+}
 
 .endBtn{
     width: 300px;
