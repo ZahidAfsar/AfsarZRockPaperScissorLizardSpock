@@ -309,7 +309,7 @@ rockBtn3.addEventListener('click', async () => {
         displayText.textContent = "Player 2's Turn"
         userPick = 'rock';
         TurnOne = false;
-        compareInput(userPick, userSecondPick);
+        compareInput(userSecondPick, userPick);
         updateScore()
     
 });
@@ -319,7 +319,7 @@ paperBtn3.addEventListener('click', async () => {
         displayText.textContent = "Player 2's Turn"
         userPick = 'paper';
         TurnOne = false;
-        compareInput(userPick, userSecondPick);
+        compareInput(userSecondPick, userPick);
         updateScore()
     
 });
@@ -329,7 +329,7 @@ scissorsBtn3.addEventListener('click', async () => {
         displayText.textContent = "Player 2's Turn"
         userPick = 'scissors';
         TurnOne = false;
-          compareInput(userPick, userSecondPick);
+          compareInput(userSecondPick, userPick);
         updateScore()
     
 });
@@ -339,7 +339,7 @@ lizardBtn3.addEventListener('click', async () => {
         displayText.textContent = "Player 2's Turn"
         userPick = 'lizard';
         TurnOne = false;
-        compareInput(userPick, userSecondPick);
+        compareInput(userSecondPick, userPick);
         updateScore()
     
 });
@@ -348,7 +348,7 @@ spockBtn3.addEventListener('click', async () => {
         displayText.textContent = "Player 2's Turn"
         userPick = 'spock';
         TurnOne = false;
-        compareInput(userPick, userSecondPick);
+        compareInput(userSecondPick, userPick);
         updateScore()
     
 });
