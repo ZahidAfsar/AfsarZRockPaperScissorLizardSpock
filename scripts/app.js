@@ -264,7 +264,7 @@ rockBtn2.addEventListener('click', async () => {
         displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'rock';
         TurnOne = true;
-        compareInput(userPick, userSecondPick);
+        // compareInput(userPick, userSecondPick);
         updateScore()
 });
 
@@ -273,7 +273,7 @@ paperBtn2.addEventListener('click', async () => {
         displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'paper';
         TurnOne = true;
-        compareInput(userPick, userSecondPick);
+        // compareInput(userPick, userSecondPick);
         updateScore()
     
 });
@@ -283,7 +283,7 @@ scissorsBtn2.addEventListener('click', async () => {
         displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'scissors';
         TurnOne = true;
-        compareInput(userPick, userSecondPick);
+        // compareInput(userPick, userSecondPick);
         updateScore()
     
 });
@@ -293,7 +293,7 @@ lizardBtn2.addEventListener('click', async () => {
         displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'lizard';
         TurnOne = true;
-        compareInput(userPick, userSecondPick);
+        // compareInput(userPick, userSecondPick);
         updateScore()
     
 });
@@ -302,7 +302,7 @@ spockBtn2.addEventListener('click', async () => {
         displayText3.textContent = "Player 2's Turn"
         userSecondPick = 'spock';
         TurnOne = true;
-        compareInput(userPick, userSecondPick);
+        // compareInput(userPick, userSecondPick);
         updateScore()
     
 });
