@@ -1,90 +1,181 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rock Paper Scissor Lizard Spock</title>
+    <title>Play RPSLS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-   
-  
+</head>
 
-  <div class="container topSpace">
-    <div class="row center">
-    <h1 class="center" >Rock Paper</h1>
-    <h1 class="center" >Scissors Lizard</h1>
-    <h1 class="center" >Spock</h1>
+<body id="body">
+
+  <!-- Rules -->
+  <div class="div btnCenter">
+    <button type="button" class="btnRule" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <h2>?</h2>
+     </button>
     </div>
-  </div>
 
-  <div class="container center">
-    <div class="row topSpace">
-        <div class="col ">
-            <a href="./pages/gamemode.html">
-            <button class="playBtn">
-                <h3>Play</h3>
+  <!-- 1v1 or 1vCPU -->
+    <div class="container topSpace" id="firstPageHide" style="display: block;">
+        <div class="row center">
+          <div class="div">
+              <h1>Rock Paper</h1>
+              <h1>Scissors Lizard</h1> 
+              <h1>Spock</h1> 
+            </div> 
+            <div class="row topSpace">
+            <div class="btn-group modeSelect MograFont" role="group" aria-label="Basic mixed styles example">
+              <button class="btn" id="oneVersusOneBtn">
+                <p class="gamemode">1v1</p>
             </button>
-            </a>
+            <button class="btn" id="oneVScpuBtn">
+              <p class="gamemode">1vCPU</p>
+          </button>
+            </div>
+          </div>
         </div>
-        <div class="col">
- <!-- Button trigger modal -->
- <button type="button" class="btnRule" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    <h2>?</h2>
-   </button>
+    </div>
 
-<!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" style="border-radius: 60px;">
-        <div class="modal-header text-center" style="border-bottom: 1px solid #C884A6;">
-          <h1 class="modal-title w-100" id="staticBackdropLabel">Rules</h1>
+    <!-- best out of 1 or 5 or 7 -->
+    <div style="display: none;" id="choicesPageHide">
+        <div class="container topSpace">
+        <div class="row center">
+          <div class="div">
+              <h1>Rock Paper</h1>
+              <h1>Scissors Lizard</h1> 
+              <h1>Spock</h1> 
+            </div> 
+            <div class="container">
+            <div class="row topSpace">
+            <div class="btn-group btnSelect MograFont" role="group" aria-label="Basic mixed styles example">
+              <div class="col">
+              <a>
+                <button class="btn" id="bestOf1Btn">
+                    <p class="gamemode">bestOf1</p>
+                </button>
+            </a>
+          </div>
+          <div class="col">
+              <a>
+                <button class="btn" id="bestOf5Btn">
+                    <p class="gamemode">bestOf5</p>
+                </button>
+            </a>
+          </div>
+          <div class="col">
+            <a>
+              <button class="btn" id="bestOf7Btn">
+                  <p class="gamemode">bestOf7</p>
+              </button>
+          </a>
         </div>
-        <div class="modal-body MograFont rules">
-            <p>Scissors cuts paper.</p>
-            <p>Paper covers rock. </p>
-            <p>Rock crushes lizard.</p>   
-            <p>Lizard poisons Spock.</p>   
-            <p>Spock smashes scissors.</p>   
-            <p>Scissors decapitates lizard.</p>    
-            <p>Lizard eats paper.</p>    
-            <p>Paper disproves Spock.</p>    
-            <p>Spock vaporizes rock.</p>   
-            <p>Rock crushes scissors.</p>    
-        </div>
-        <div class="modal-footer" style="border-top: 1px solid #C884A6;">
-          <button type="button" class="btnRound" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+
+    <!-- Modal Rules -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="border-radius: 60px;">
+          <div class="modal-header text-center" style="border-bottom: 1px solid #C884A6;">
+            <h1 class="modal-title w-100" id="staticBackdropLabel">Rules</h1>
+          </div>
+          <div class="modal-body MograFont rules">
+              <p>Scissors cuts paper.</p>
+              <p>Paper covers rock. </p>
+              <p>Rock crushes lizard.</p>   
+              <p>Lizard poisons Spock.</p>   
+              <p>Spock smashes scissors.</p>   
+              <p>Scissors decapitates lizard.</p>    
+              <p>Lizard eats paper.</p>    
+              <p>Paper disproves Spock.</p>    
+              <p>Spock vaporizes rock.</p>   
+              <p>Rock crushes scissors.</p>    
+          </div>
+          <div class="modal-footer" style="border-top: 1px solid #C884A6;">
+            <button type="button" class="btnRound" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Play Game -->
+    <div style="display: none;" id="gameHide">
+        <div class="padding">
+            <h1 class="center" id="displayText">Choose One to Play</h1>
+            <div class="container topSpace">
+              <div class="row">
+                  <div class="col">
+                      <img class="btnImg" id="rockBtn" src="./assets/rock.png" alt="rock">
+                      <h3 class="MograFont imgText">ROCK</h3>
+                  </div>
+                  <div class="col">
+                      <img class="btnImg" id="paperBtn" src="./assets/paper.png" alt="paper">
+                      <h3 class="MograFont imgText">PAPER</h3>
+                  </div>
+                  <div class="col">
+                      <img class="btnImg" id="scissorsBtn" src="./assets/scissor.png" alt="scissor">
+                      <h3 class="MograFont imgText">SCISSOR</h3>
+                  </div>
+                  <div class="col">
+                      <img class="btnImg" id="lizardBtn" src="./assets/Lizard.png" alt="lizard">
+                      <h3 class="MograFont imgText">LIZARD</h3>
+                  </div>
+                  <div class="col">
+                      <img class="btnImg" id="spockBtn" src="./assets/spock.png" alt="spock">
+                      <h3 class="MograFont imgText">SPOCK</h3>
+          
+                  </div>
+              </div>
+           </div>
+           <div class="container topSpace">
+            <div class="row topSpace">
+            <div class="d-flex justify-content-between">
+              <p class="playerScore" id="p1Score">P1 SCORE: 0</p>
+              <p class="enemyScore" id="p2Score">P2 SCORE: 0</p>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
-  </div>
 
- <div class="container topSpace">
-    <div class="row">
-        <div class="col">
-            <img src="./assets/rock.png" alt="rock">
-        </div>
-        <div class="col">
-            <img src="./assets/paper.png" alt="paper">
-        </div>
-        <div class="col">
-            <img src="./assets/scissor.png" alt="scissor">
-        </div>
-        <div class="col">
-            <img src="./assets/Lizard.png" alt="lizard">
-        </div>
-        <div class="col">
-            <img src="./assets/spock.png" alt="spock">
+<!-- End Screen -->
 
+    <div style="display: none;" id="endScreen">
+      <div class="container topSpace">
+      <div class="row center">
+        <div class="div">
+            <h1 class="center" >Results</h1>
+          </div> 
+      </div>
+        <p class="MograFont winner center topSpace" id="winText">Player 1 Wins!</p>
+      </div>
+      <div class="d-flex justify-content-center topSpace" >
+        <a href="../index.html">
+          <button class="endBtn">
+              <p class="MograFont">Return to Menu</p>
+          </button>
+      </a>
+      </div>
+      <div class="container">
+        <div class="d-flex justify-content-between topSpace">
+          <p class="playerScore" id="p1Score">P1 SCORE: 0</p>
+          <p class="enemyScore" id="p2Score">P2 SCORE: 0</p>
         </div>
+      </div>
     </div>
- </div>
 
-    <script src="./scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
 </html>
