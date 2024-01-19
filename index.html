@@ -11,12 +11,12 @@
 
 <body id="body">
 
-  <!-- Rules -->
-  <div class="div btnCenter">
-    <button type="button" class="btnRule" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      <h2>?</h2>
-     </button>
-    </div>
+ <!-- Rules -->
+ <div class="div btnCenter" id="RulesBtn" style="display: none;" >
+  <button type="button"  class="btnRule" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <h2>?</h2>
+   </button>
+  </div>
 
     <!-- Main Menu -->
     <div class="container topSpace" id="mainPageHide" style="display: block;">
@@ -119,6 +119,46 @@
     </div>
     </div>
 
+    <!-- best out of 1 or 5 or 7  for 1v1 mode-->
+    <div style="display: none;" id="choicesPageHide2">
+      <div class="container topSpace">
+      <div class="row center">
+        <div class="div">
+            <h1>Rock Paper</h1>
+            <h1>Scissors Lizard</h1> 
+            <h1>Spock</h1> 
+          </div> 
+          <div class="container">
+          <div class="row topSpace">
+          <div class="btn-group btnSelect MograFont" role="group" aria-label="Basic mixed styles example">
+            <div class="col">
+            <a>
+              <button class="btn" id="bestOf1Btn2">
+                  <p class="gamemode">bestOf1</p>
+              </button>
+          </a>
+        </div>
+        <div class="col">
+            <a>
+              <button class="btn" id="bestOf5Btn2">
+                  <p class="gamemode">bestOf5</p>
+              </button>
+          </a>
+        </div>
+        <div class="col">
+          <a>
+            <button class="btn" id="bestOf7Btn2">
+                <p class="gamemode">bestOf7</p>
+            </button>
+        </a>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
     <!-- Modal Rules -->
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -150,6 +190,7 @@
     <div style="display: none;" id="gameHide">
         <div class="padding">
             <h1 class="center" id="displayText">Choose One to Play</h1>
+            <h1 class="center" id="displayText2" >You Chose</h1>
             <div class="container topSpace">
               <div class="row">
                   <div class="col">
@@ -185,6 +226,78 @@
         </div>
         </div>
     </div>
+
+
+    <!-- Play Game 1v1 -->
+    <div style="display: none;" id="gameHide2">
+      <div class="padding">
+                <div class="row">
+                  <div class="col-1">
+                    <img class="btnImg" id="rockBtn2" src="./assets/rock.png" alt="rock">
+                  </div>
+                  <div class="col-10">
+                   <h1 class="center" id="displayText">Choose One to Play</h1>
+                  </div>
+                  <div class="col-1">
+                    <img class="btnImg" id="rockBtn3" src="./assets/rock.png" alt="rock">
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                    <img class="btnImg" id="paperBtn2" src="./assets/paper.png" alt="paper">
+                  </div>
+                  <div class="col-10 d-flex justify-content-center">
+                    <button type="button" class="btnRule" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <h2>?</h2>
+                     </button>    
+                   </div>
+                   <div class="col-1">
+                     <img class="btnImg" id="paperBtn3" src="./assets/paper.png" alt="paper">
+                   </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                    <img class="btnImg" id="scissorsBtn2" src="./assets/scissor.png" alt="scissor">
+                  </div>
+                  <div class="col-10">
+                    
+                   </div>
+                   <div class="col-1">
+                    <img class="btnImg" id="scissorsBtn3" src="./assets/scissor.png" alt="scissor">
+                   </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-1">
+                    <img class="btnImg" id="lizardBtn2" src="./assets/Lizard.png" alt="lizard">
+                  </div>
+                  <div class="col-10">
+                    
+                   </div>
+                   <div class="col-1">
+                    <img class="btnImg" id="lizardBtn3" src="./assets/Lizard.png" alt="lizard">
+                   </div>
+                  </div>
+                <div class="row">
+                  <div class="col-1">
+                    <img class="btnImg" id="spockBtn2" src="./assets/spock.png" alt="spock">
+                  </div>
+                  <div class="col-10">
+                    
+                   </div>
+                   <div class="col-1">
+                    <img class="btnImg" id="spockBtn3" src="./assets/spock.png" alt="spock">
+                   </div>
+                  </div>
+         <div class="container">
+          <div class="row">
+          <div class="d-flex justify-content-between">
+            <p class="playerScore" id="p1Score">P1 SCORE: 0</p>
+            <p class="enemyScore" id="p2Score">P2 SCORE: 0</p>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
 
 <!-- End Screen -->
 
